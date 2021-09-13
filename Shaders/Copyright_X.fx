@@ -37,7 +37,7 @@
     * Sorted blending modes in a more logical fashion, grouping by type.
 
     Version 0.x by uchu suzume
-    *Added some ure.
+    *Added some texure.
     *Fixed blend option applying correctly to alpha pixels by changing the order of code blocks.
     *Add space of UI and collapsed some parameters for visibility.
     *Changed the order of parameter in snap rotate.
@@ -1030,7 +1030,7 @@ float4 PS_cLayer_CAb_B(in float4 pos : SV_Position, in float2 texCoord : TEXCOOR
         return color;
 }
 
-void PS_cLayer_(in float4 pos : SV_Position, float2 texCoord : TEXCOORD, out float4 passColor : SV_Target) {
+void PS_cLayer(in float4 pos : SV_Position, float2 texCoord : TEXCOORD, out float4 passColor : SV_Target) {
 
 
     const float Depth = 0.999 - ReShade::GetLinearizedDepth(texCoord).x;
@@ -1504,7 +1504,6 @@ technique Copyright_test< ui_label = "Copyright X"; >
     pass pass6
    {
         VertexShader = PostProcessVS;
-        PixelShader = PS_cLayer_;
+        PixelShader = PS_cLayer;
     }
 }
-	
