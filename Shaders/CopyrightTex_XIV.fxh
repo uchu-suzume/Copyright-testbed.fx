@@ -134,6 +134,6 @@ uniform int variable \
 #define _SOURCE_COPYRIGHT_FILE cLayerTex
 #define _SOURCE_COPYRIGHT_SIZE cLayer_SIZE_X, cLayer_SIZE_Y
 #else 
-#define  _SOURCE_COPYRIGHT_FILE ""
-#define _SOURCE_COPYRIGHT_SIZE 500.0, 500.0
+#define  _SOURCE_COPYRIGHT_FILE "Copyright4kH.png"
+#define _SOURCE_COPYRIGHT_SIZE 1400.0, 80.0
 #endif
