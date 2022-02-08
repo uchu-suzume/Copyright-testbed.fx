@@ -108,7 +108,7 @@ uniform int variable \
 #define _SOURCE_COPYRIGHT_FILE "Copyright4kH.png"
 #define _SOURCE_COPYRIGHT_SIZE 1400.0, 80.0
 
-#else // To avoid errors when changing list and the list doesn't have a matching number. リストを変更した時、変更先のリストに対応したテクスチャ番号存在しない場合はエラーを回避するためここを参照します。
+#else // To avoid errors when changing list and the list doesn't have a matching number. 別のリストを変更した時に変更先のリストに対応したテクスチャ番号存在しない場合、エラーを回避するためここを参照します。
 #define _SOURCE_COPYRIGHT_FILE "Copyright4kH.png"
 #define _SOURCE_COPYRIGHT_SIZE 1400.0, 80.0
 #endif
