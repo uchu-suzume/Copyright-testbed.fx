@@ -17,8 +17,6 @@
     * Added warning message when specified Non-existing source reference numbers.
     x Fixed incorrect specification of PSO2 logo in ui_item and Texture Definition. 
 
-    Version 0.2 by Marot Satil & uchu suzume
-    + Added "else" in _Copyright_Texture_Source list to avoid errors when switching *Tex.fxh.    
 */
 
 // -------------------------------------
