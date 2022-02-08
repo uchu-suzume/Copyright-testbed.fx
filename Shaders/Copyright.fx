@@ -59,6 +59,7 @@
     Version 1.2
     * Added scale option to gaussian layer.
     * Added more blending option to CAb layer.
+    * Added Custom List.
     + Adjusted default value of CAb to more natural look and usable.
     + Adjusted gaussian blur radius opiton #3 to reduce afterglow.
     + Expanded moving range of Gaussian layer.
@@ -105,17 +106,20 @@
   #include "CopyrightTex_XIV.fxh"
 #elif TEXTURE_SELECTION == 2
   #include "CopyrightTex_PSO2.fxh"
+#elif TEXTURE_SELECTION == 3
+  #include "CopyrightTex_Custom.fxh"
 #endif
 
 uniform int cLayer_SelectGame <
-    ui_label = "Game Select";
+    ui_label = "List Select";
     ui_tooltip = "Select a name of a game to show copyright logo for.   ";
-    ui_category = "Game Selection";
+    ui_category = "List Selection";
     ui_category_closed = true;
     ui_type = "combo";
     ui_items = "Auto-Select\0"
                "Final Fantasy XIV\0"
                "Phantasy Star Online 2:NGS\0"
+               "Custom List\0"
                ;
     ui_bind = "TEXTURE_SELECTION";
 > = TEXTURE_SELECTION;
