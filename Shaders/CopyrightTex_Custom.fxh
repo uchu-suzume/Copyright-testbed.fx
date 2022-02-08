@@ -39,7 +39,7 @@ uniform int variable \
                "Logo 09\0" \
                "Logo 10\0" \
                "-------------------------------------------------\0" \/* Use this partition if you need. よければロゴの種類が増えた時に仕切りとしてお使いください。 */
-               ; \/* This semicolon marking an end of the list. Do not delete. ここのセミコロン(;)はリストの終わりを表すものなので、間違って消すとエラーになります。*/
+               ; \/* This ; marking an end of the list. Do not delete. ここのセミコロン(;)はリストの終わりを表すものなので、間違って消すとエラーになります。*/
     ui_bind = "_Copyright_Texture_Source"; \
     ui_label = name_label; \
     ui_tooltip = description; \
