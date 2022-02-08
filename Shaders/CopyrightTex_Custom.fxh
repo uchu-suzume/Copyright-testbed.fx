@@ -41,7 +41,7 @@ uniform int variable \
                "Logo 09\0" \
                "Logo 10\0" \
                "-------------------------------------------------\0" \/* Use this partition if you need. よければロゴの種類が増えた時に仕切りとしてお使いください。 */
-               ; \/*ここのセミコロン(;)はリストの終わりを表すものなので、間違って消すとエラーになります。*/
+               ; \/* This semicolon marking an end of the list. Do not delete. ここのセミコロン(;)はリストの終わりを表すものなので、間違って消すとエラーになります。*/
     ui_bind = "_Copyright_Texture_Source"; \
     ui_label = name_label; \
     ui_tooltip = description; \
@@ -60,9 +60,9 @@ uniform int variable \
 
 // (?<=Source == )[\d][\S+]{0,999} Regular expression for renumbering. 連番修正用の正規表現。VSCodeとその拡張機能用。
 
-#if _Copyright_Texture_Source == 0 // Logo 00           面倒ですが、リストを入れ替えたりした時は番号の並びも直してください。
-#define _SOURCE_COPYRIGHT_FILE "Copyright4kH.png" // 表示するテクスチャのファイル名(.pngまで含めないとチェックに通らずエラーが出ます。
-#define _SOURCE_COPYRIGHT_SIZE 1400.0, 80.0          // テクスチャの横解像度、縦解像度。数値が間違っていてもエラーメッセージは出ないので注意してください。
+#if _Copyright_Texture_Source == 0 // Logo 00        Textures are matched by number here and in the drop-down lines. この番号とドロップダウンの行でテクスチャを照合しています。面倒ですがリストを入れ替えたりした時は番号の並びも直してください。
+#define _SOURCE_COPYRIGHT_FILE "Copyright4kH.png" // Name for textures including extension. 表示するテクスチャのファイル名(.pngまで含めないとチェックに通らずエラーが出ます。
+#define _SOURCE_COPYRIGHT_SIZE 1400.0, 80.0       // Cannot be known by error if value is wrong. Make sure to type correctly. テクスチャの横解像度、縦解像度。数値が間違っていてもエラーメッセージは出ないので注意してください。
 
 #elif _Copyright_Texture_Source == 1 // Logo 01
 #define _SOURCE_COPYRIGHT_FILE "Copyright4kH.png"
@@ -108,7 +108,7 @@ uniform int variable \
 #define _SOURCE_COPYRIGHT_FILE "Copyright4kH.png"
 #define _SOURCE_COPYRIGHT_SIZE 1400.0, 80.0
 
-#else // リストを変更した時、変更先のリストに対応したテクスチャ番号存在しない場合はエラーを回避するためここを参照します。
+#else // To avoid errors when changing list and the list doesn't have a matching number. リストを変更した時、変更先のリストに対応したテクスチャ番号存在しない場合はエラーを回避するためここを参照します。
 #define _SOURCE_COPYRIGHT_FILE "Copyright4kH.png"
 #define _SOURCE_COPYRIGHT_SIZE 1400.0, 80.0
 #endif
