@@ -30,7 +30,7 @@ uniform int variable \
 < \
     ui_items = \
                "Logo 00\0" \/* Name displayed in Dropdown. Logo 00の部分を書き換えることでGShadeのUI上で表示される名前を任意のものに変更できます。 */
-               "Logo 01\0" \/* Leave symbols / and ". スラッシュやダブルクォーター等は動作上必要なものなので書き換える際は注意してください。 */
+               "Logo 01\0" \/* Leave symbols / and ". スラッシュやダブルクォーテーション等は動作上必要なものなので書き換える際は注意してください。 */
                "Logo 02\0" \
                "Logo 03\0" \
                "Logo 04\0" \
@@ -58,7 +58,7 @@ uniform int variable \
 // Texture Definition
 // -------------------------------------
 
-// (?<=Source == )[\d][\S+]{0,999} Regular expression for renumbering. 連番修正用の正規表現。VSCodeとその拡張機能用。
+// (?<=Source == )[\d][\S+]{0,999} Regular expression for renumbering. 連番修正用の正規表現。VSCode等のエディタと連番入力機能用。
 
 #if _Copyright_Texture_Source == 0 // Logo 00        Textures are matched by number here and in the drop-down lines. この番号とドロップダウンの行でテクスチャを照合しています。面倒ですがリストを入れ替えたりした時は番号の並びも直してください。
 #define _SOURCE_COPYRIGHT_FILE "Copyright4kH.png" // Name for textures including extension. 表示するテクスチャのファイル名(.pngまで含めないとチェックに通らずエラーが出ます。
