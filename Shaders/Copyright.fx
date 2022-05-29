@@ -822,15 +822,15 @@ void PS_cLayer(in float4 pos : SV_Position, float2 texCoord : TEXCOORD, out floa
                 ColorFactor =  saturate(DrawTex.rgb * ColorOverride.rgb); 
                 break;
             case 3:
-                ColorFactor =  DrawTex.rgb + ColorOverride.rgb;
+                ColorFactor =  saturate(ColorFactor.rgb + ColorOverride.rgb);
                 break;
             case 4:
-                ColorFactor =  float4(-1, -1, -1, 1) * DrawTex;
-                ColorFactor =  saturate(DrawTex.rgb * ColorOverride.rgb); 
+                ColorFactor =  float3(1, 1, 1) - DrawTex.rgb;
+                ColorFactor =  saturate(ColorFactor.rgb * ColorOverride.rgb); 
                 break;
             case 5:
-                ColorFactor =  float4(-1, -1, -1, 1) * DrawTex;
-                ColorFactor =  DrawTex.rgb + ColorOverride.rgb;
+                ColorFactor =  float3(1, 1, 1) - DrawTex.rgb;
+                ColorFactor =  saturate(ColorFactor.rgb + ColorOverride.rgb); 
                 break;
         }
 
