@@ -64,6 +64,9 @@
     + Adjusted gaussian blur radius opiton #3 to reduce afterglow.
     + Expanded moving range of Gaussian layer.
     + Improved the formulas of Gaussian and CAb layers to keep the coordinate base even after rotation.
+
+    Version 1.3 by uchu suzume
+    + Improved formula for recolor.
 */
 
 #include "ReShade.fxh"
